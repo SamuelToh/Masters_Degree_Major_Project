@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F3774A94-ABBC-44BA-A30C-366A35D1351A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BioPatML.Test</RootNamespace>
+    <AssemblyName>BioPatML.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.cs" />
+    <Compile Include="PaperTestCases\TestPaperMotifTestCases.cs" />
+    <Compile Include="PaperTestCases\TestPaperRegionalTestCases.cs" />
+    <Compile Include="PaperTestCases\TestPaperSpecialCases.cs" />
+    <Compile Include="PaperTestCases\TestPaperStructuredTestCases.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="TestAccessor\TestAccessorCircular.cs" />
+    <Compile Include="TestAccessor\TestAccessorComplement.cs" />
+    <Compile Include="TestAccessor\TestAccessorFactory.cs" />
+    <Compile Include="TestAccessor\TestAccessorLinear.cs" />
+    <Compile Include="TestAccessor\TestAccessorTransparent.cs" />
+    <Compile Include="TestAlphabet\TestAlphabet.cs" />
+    <Compile Include="TestAlphabet\TestAlphabetAA.cs" />
+    <Compile Include="TestAlphabet\TestAlphabetDNA.cs" />
+    <Compile Include="TestAlphabet\TestAlphabetFactory.cs" />
+    <Compile Include="TestAlphabet\TestAlphabetRNA.cs" />
+    <Compile Include="TestDataStructure\TestHistogramChar.cs" />
+    <Compile Include="TestDataStructure\TestMapChar.cs" />
+    <Compile Include="TestDataStructure\TestPrimitiveParse.cs" />
+    <Compile Include="TestIndexer\TestIndexerDirect.cs" />
+    <Compile Include="TestIndexer\TestIndexerReverse.cs" />
+    <Compile Include="TestPatternReader\TestPatternReader.cs" />
+    <Compile Include="TestPatterns\TestAlignment.cs" />
+    <Compile Include="TestPatterns\TestAny.cs" />
+    <Compile Include="TestPatterns\TestBlock.cs" />
+    <Compile Include="TestPatterns\TestComposition.cs" />
+    <Compile Include="TestPatterns\TestConstraint.cs" />
+    <Compile Include="TestPatterns\TestDefinition.cs" />
+    <Compile Include="TestPatterns\TestDefinitionList.cs" />
+    <Compile Include="TestPatterns\TestGap.cs" />
+    <Compile Include="TestPatterns\TestIteration.cs" />
+    <Compile Include="TestPatterns\TestLogic.cs" />
+    <Compile Include="TestPatterns\TestMatch.cs" />
+    <Compile Include="TestPatterns\TestMotif.cs" />
+    <Compile Include="TestPatterns\TestProfile.cs" />
+    <Compile Include="TestPatterns\TestProfileAll.cs" />
+    <Compile Include="TestPatterns\TestProfileBest.cs" />
+    <Compile Include="TestPatterns\TestProfileFactory.cs" />
+    <Compile Include="TestPatterns\TestProsite.cs" />
+    <Compile Include="TestPatterns\TestPWM.cs" />
+    <Compile Include="TestPatterns\TestRegularExp.cs" />
+    <Compile Include="TestPatterns\TestRepeat.cs" />
+    <Compile Include="TestPatterns\TestSeriesAll.cs" />
+    <Compile Include="TestPatterns\TestSeriesBest.cs" />
+    <Compile Include="TestPatterns\TestSetALL.cs" />
+    <Compile Include="TestPatterns\TestSetBest.cs" />
+    <Compile Include="TestPatterns\TestUse.cs" />
+    <Compile Include="TestPatterns\TestVoid.cs" />
+    <Compile Include="TestReader\TestMBFReader.cs" />
+    <Compile Include="TestSatistic\TestHistogramSymbol.cs" />
+    <Compile Include="TestSequence.Annotation\TestAnnotation.cs" />
+    <Compile Include="TestSequence.Annotation\TestAnnotationList.cs" />
+    <Compile Include="TestSequence.List\TestAnnotatedList.cs" />
+    <Compile Include="TestSequence.List\TestFeatureList.cs" />
+    <Compile Include="TestSequence.List\TestRegionList.cs" />
+    <Compile Include="TestSequence.List\TestSequenceList.cs" />
+    <Compile Include="TestSequence\TestFeature.cs" />
+    <Compile Include="TestSequence\TestRegion.cs" />
+    <Compile Include="TestSequence\TestSequence.cs" />
+    <Compile Include="TestSymbol\TestSymbol.cs" />
+    <Compile Include="TestSymbol\TestSymbolAA.cs" />
+    <Compile Include="TestSymbol\TestSymbolArray.cs" />
+    <Compile Include="TestSymbol\TestSymbolMeta.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BioPatML\BioPatML.csproj">
+      <Project>{16E11538-9BD5-4FE6-B059-3E686A9BF9FD}</Project>
+      <Name>BioPatML %28Windows\BioPatML Server\BioPatML%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Resource Include="Resources\data\GenBank\NC_000117-Chlamydia trachomatis D-UW-3CX.gbk" />
+    <Resource Include="Resources\BioPaperTestData\RegionalPattern\BioPatML.xsd">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Resources\BioPatMLXML\BioPatmlDefinitionList1.test" />
+    <Resource Include="Resources\BioPatMLXML\BioPatmlDefinitionList2.test" />
+    <Resource Include="Resources\BioPatMLXML\BioPatMLrepeat1.test" />
+    <Resource Include="Resources\BioPatMLXML\Import1.test" />
+    <Resource Include="Resources\BioPatMLXML\Regex.test" />
+    <Resource Include="Resources\BioPatMLXML\Repeat1.test" />
+    <Resource Include="Resources\data\GenBank\1ChlamydophilaCaviaeGPIC.gbk" />
+    <Resource Include="Resources\data\GenBank\AE001582.gbk" />
+    <Resource Include="Resources\data\GenBank\AF032047.gbk" />
+    <Resource Include="Resources\data\GenBank\AnnIX-v003.gbk" />
+    <Resource Include="Resources\data\GenBank\ATF14F8.gbk" />
+    <Resource Include="Resources\data\GenBank\AY095303S1.gbk" />
+    <Resource Include="Resources\data\GenBank\BC000007.gbk" />
+    <Resource Include="Resources\data\GenBank\bioperlwiki+D12555.gbk" />
+    <Resource Include="Resources\data\GenBank\bioperlwiki.gbk" />
+    <Resource Include="Resources\data\GenBank\bioperlwiki2.gbk" />
+    <Resource Include="Resources\data\GenBank\BK000016-tpa.gbk" />
+    <Resource Include="Resources\data\GenBank\Chr12_100Kb.gb" />
+    <Resource Include="Resources\data\GenBank\CP000896.gbk" />
+    <Resource Include="Resources\data\GenBank\D10483.gbk" />
+    <Resource Include="Resources\data\GenBank\D12555.gbk" />
+    <Resource Include="Resources\data\GenBank\Mcjanrna_rdbII.gbk" />
+    <Resource Include="Resources\data\GenBank\MUSIGHBA1.gbk" />
+    <Resource Include="Resources\data\GenBank\NC_001284.gbk" />
+    <Resource Include="Resources\data\GenBank\NC_005213.gbk" />
+    <Resource Include="Resources\data\GenBank\NC_006511-short.gbk" />
+    <Resource Include="Resources\data\GenBank\NT_021877.gbk" />
+    <Resource Include="Resources\data\GenBank\random.gbk" />
+    <Resource Include="Resources\data\GenBank\RPLP0.gb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BioPaperTestData\MotifPattern\Block.xml" />
+    <Resource Include="Resources\BioPaperTestData\MotifPattern\Editor-Regex.xml" />
+    <Resource Include="Resources\BioPaperTestData\MotifPattern\Motif.xml" />
+    <Resource Include="Resources\BioPaperTestData\MotifPattern\Prosite.xml" />
+    <Resource Include="Resources\BioPaperTestData\MotifPattern\PWM.xml" />
+    <Resource Include="Resources\BioPaperTestData\MotifPattern\Regex.xml" />
+    <Resource Include="Resources\BioPaperTestData\RegionalPattern\RegionalAny.xml" />
+    <Resource Include="Resources\BioPaperTestData\RegionalPattern\RegionalComposition.xml" />
+    <Resource Include="Resources\BioPaperTestData\RegionalPattern\RegionalGap.xml" />
+    <Resource Include="Resources\BioPaperTestData\SpecialPattern\Alignment.xml" />
+    <Resource Include="Resources\BioPaperTestData\SpecialPattern\Constraint.xml" />
+    <Resource Include="Resources\BioPaperTestData\SpecialPattern\Void.xml" />
+    <Resource Include="Resources\BioPaperTestData\StructuredPattern\Iteration.xml" />
+    <Resource Include="Resources\BioPaperTestData\StructuredPattern\Logic.xml" />
+    <Resource Include="Resources\BioPaperTestData\StructuredPattern\SeriesAll.xml" />
+    <Resource Include="Resources\BioPaperTestData\StructuredPattern\SeriesBest.xml" />
+    <Resource Include="Resources\BioPaperTestData\StructuredPattern\SetBest.xml" />
+    <Resource Include="Resources\BioPatMLXML\Alignment.xml" />
+    <Resource Include="Resources\BioPatMLXML\Any.xml" />
+    <Resource Include="Resources\BioPatMLXML\BadMotif.xml" />
+    <Resource Include="Resources\BioPatMLXML\Block.xml" />
+    <Resource Include="Resources\BioPatMLXML\Composition.xml" />
+    <Resource Include="Resources\BioPatMLXML\Constraint.xml" />
+    <Resource Include="Resources\BioPatMLXML\Definition.xml" />
+    <Resource Include="Resources\BioPatMLXML\DefinitionList2.xml" />
+    <Resource Include="Resources\BioPatMLXML\Gap.xml" />
+    <Resource Include="Resources\BioPatMLXML\GapWeighted.xml" />
+    <Resource Include="Resources\BioPatMLXML\Logic.xml" />
+    <Resource Include="Resources\BioPatMLXML\Motif.xml" />
+    <Resource Include="Resources\BioPatMLXML\Prosite.xml" />
+    <Resource Include="Resources\BioPatMLXML\PWM.xml" />
+    <Resource Include="Resources\BioPatMLXML\SeriesAll.xml" />
+    <Resource Include="Resources\BioPatMLXML\SeriesBest.xml" />
+    <Resource Include="Resources\BioPatMLXML\SetAll.xml" />
+    <Resource Include="Resources\BioPatMLXML\SetBest.xml" />
+    <Resource Include="Resources\BioPatMLXML\TestIteration.xml" />
+    <Resource Include="Resources\BioPatMLXML\Use.xml" />
+    <Resource Include="Resources\BioPatMLXML\Void.xml" />
+    <Resource Include="Resources\data\GenBank\Readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

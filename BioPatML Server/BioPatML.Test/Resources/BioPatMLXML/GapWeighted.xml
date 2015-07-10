@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition name = "Gap" >
+
+    <Gap  name = "gap" minimum = "2" maximum = "6" increment = "1.1" impact = "0.9" threshold = "0.7" >
+      <Weights >0.0 0.8 1.0 </Weights>
+    </Gap>
+
+  </Definition>
+</BioPatML>

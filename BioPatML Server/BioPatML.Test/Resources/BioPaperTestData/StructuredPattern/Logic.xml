@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition name="Any">
+
+    <Logic operation="AND" threshold="0.0">
+      <Motif alphabet="AA" motif="LLLLLLLLLLLLLLL" threshold="0.6"/>
+      <Motif alphabet="AA" motif="xxxGxxxGxxxGxxx" threshold="1.0"/>
+    </Logic>
+
+  </Definition>
+</BioPatML>

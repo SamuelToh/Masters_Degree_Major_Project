@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://bio.mquter.qut.edu.au/BioPatML2010/BioPatMLDataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BioPatMLEditor.Web" />
+  <xs:import schemaLocation="http://bio.mquter.qut.edu.au/BioPatML2010/BioPatMLDataService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/QUT.Bio.BioPatMLDataRepository.DataContract" />
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetALLDefPatternInfo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetALLDefPatternInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BioPatMLEditor.Web" minOccurs="0" name="GetALLDefPatternInfoResult" nillable="true" type="q1:ArrayOfDefinitionPatternInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatternDetailInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/QUT.Bio.BioPatMLDataRepository.DataContract" minOccurs="0" name="def" nillable="true" type="q2:DefinitionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatternDetailInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPatternDetailInfoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

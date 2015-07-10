@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition name="Series">
+
+    <Series  name = "series" impact = "0.9" threshold = "0.7" mode = "ALL">
+      <Motif  name = "motif1" motif = "aaa" impact = "0.1" threshold = "1.0" alphabet = "DNA" />
+      <Any  name = "any" minimum = "1" maximum = "5" increment = "1" impact = "0.3" />
+      <Motif  name = "motif2" motif = "ctg" impact = "0.2" threshold = "1.0" alphabet = "DNA" />
+    </Series>
+
+  </Definition>
+</BioPatML>

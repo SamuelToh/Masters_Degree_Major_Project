@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition name="Void">
+    <Series mode="ALL" threshold="0.0">
+      <Motif motif="CC" alphabet="AA" threshold="1.0" />
+      <Void name="void" impact="0.9"/>
+    </Series>
+  </Definition>
+</BioPatML>

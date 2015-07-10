@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition>
+
+    <Series mode="ALL" threshold="0.0">
+      <Motif motif="CC" alphabet="AA" threshold="1.0"/>
+      <Iteration minimum="2" maximum="4" threshold="0.0">
+	<Void/>
+	<Gap minimum="1" maximum="3" />
+        <Motif motif="CC" alphabet="AA" threshold="1.0" />
+       </Iteration>
+    </Series>
+
+  </Definition>
+</BioPatML>

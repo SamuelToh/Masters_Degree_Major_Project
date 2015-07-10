@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition>
+
+    <Series    threshold = "0.0" mode = "ALL">
+      <Constraint position="START" offset="+7"/>
+      <Motif name="domain1" motif="PTAP" alphabet="AA" threshold="0.4"/>
+      <Alignment  pattern="domain1" position="END" offset="-1"/>
+      <Motif name="domain2" motif="PPxY" alphabet="AA" threshold="0.6"/>
+    </Series>
+
+  </Definition>
+</BioPatML>
+
+PTAPPxY

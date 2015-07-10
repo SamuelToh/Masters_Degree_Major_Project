@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition name="pwm">
+
+    <PWM  name = "PWM" impact = "0.9" threshold = "0.7" alphabet = "DNA" >
+      <Row  letter = "a">1 2 3</Row>
+      <Row  letter = "c">4 5 6</Row>
+    </PWM>
+
+  </Definition>
+</BioPatML>

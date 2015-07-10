@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition name="Def">
+    <Definitions>   
+      <Import uri="Import1.test" />
+    </Definitions>
+
+
+  </Definition>
+</BioPatML>

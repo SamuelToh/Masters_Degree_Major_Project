@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition>
+
+    <Series    threshold = "1.0" mode = "ALL">
+      <Motif  name = "motif1" motif = "ttcg" impact = "0.2" threshold = "1.0" alphabet = "DNA" />
+      <Alignment  name = "align1" pattern = "motif1" position = "END" offset = "-2" impact = "0.9" />
+    </Series>
+
+  </Definition>
+</BioPatML>

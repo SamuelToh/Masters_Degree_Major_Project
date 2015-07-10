@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition name="Def">
+
+    <Definitions>
+    	<Definition name="Def1" > 
+
+		<Definitions> 
+			<Definition name="Def11" >
+				<Any minimum="4" maximum="5" increment="1.0" /> 
+			</Definition>
+		</Definitions>
+
+		<Any minimum="4" maximum="5" increment="1.0" /> 
+	</Definition>
+    	
+	<Definition name="Def2" > <Any minimum="4" maximum="5" increment="1.0" /> </Definition>
+    	<Definition name="Def3" > <Any minimum="4" maximum="5" increment="1.0" /> </Definition>
+    </Definitions>
+    
+    <Motif  name = "motif" motif = "ttgac" impact = "0.9" threshold = "0.7" alphabet = "DNA" />
+
+
+  </Definition>
+</BioPatML>

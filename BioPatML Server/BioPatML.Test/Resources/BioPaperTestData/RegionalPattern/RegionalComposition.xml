@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition name="Composition">
+
+    <Composition name="transmembrane domain" impact="1.0"
+          minimum="15" maximum="25" increment="1.0"
+          mode="BEST" alphabet="AA" threshold="0.2" >
+      <Symbol letter="V" weight="1.0" />
+      <Symbol letter="I" weight="1.0" />
+      <Symbol letter="L" weight="1.0" />
+      <Default weight="0.0" />
+    </Composition>
+
+  </Definition>
+</BioPatML>

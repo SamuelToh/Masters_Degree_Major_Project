@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CD608E21-149C-413C-ADFE-B2D99D9B6F27}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestBioPatML</RootNamespace>
+    <AssemblyName>TestBioPatML</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\NUnit 2.5.3\bin\net-2.0\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.3.9345, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="nunit.mocks, Version=2.5.3.9345, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="QUT.Bio.BioPatML">
+      <HintPath>..\BioPatML\bin\Debug\QUT.Bio.BioPatML.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PaperTestCases\TestPaperMotifTestCases.cs" />
+    <Compile Include="PaperTestCases\TestPaperRegionalTestCases.cs" />
+    <Compile Include="PaperTestCases\TestPaperSpecialCases.cs" />
+    <Compile Include="PaperTestCases\TestPaperStructuredTestCases.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestAccessor\TestAccessorCircular.cs" />
+    <Compile Include="TestAccessor\TestAccessorComplement.cs" />
+    <Compile Include="TestAccessor\TestAccessorFactory.cs" />
+    <Compile Include="TestAccessor\TestAccessorLinear.cs" />
+    <Compile Include="TestAccessor\TestAccessorTransparent.cs" />
+    <Compile Include="TestAlphabet\TestAlphabetDNA.cs" />
+    <Compile Include="TestAlphabet\TestAlphabet.cs" />
+    <Compile Include="TestAlphabet\TestAlphabetAA.cs" />
+    <Compile Include="TestAlphabet\TestAlphabetFactory.cs" />
+    <Compile Include="TestAlphabet\TestAlphabetRNA.cs" />
+    <Compile Include="TestDataStructure\TestPrimitiveParse.cs" />
+    <Compile Include="TestDataStructure\TestHistogramChar.cs" />
+    <Compile Include="TestDataStructure\TestMapChar.cs" />
+    <Compile Include="TestIndexer\TestIndexerDirect.cs" />
+    <Compile Include="TestIndexer\TestIndexerFactory.cs" />
+    <Compile Include="TestIndexer\TestIndexerReverse.cs" />
+    <Compile Include="TestPatternReader\TestPatternReader.cs" />
+    <Compile Include="TestPatterns\TestAlignment.cs" />
+    <Compile Include="TestPatterns\TestAny.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPatterns\TestBlock.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPatterns\TestComposition.cs" />
+    <Compile Include="TestPatterns\TestConstraint.cs" />
+    <Compile Include="TestPatterns\TestDefinition.cs" />
+    <Compile Include="TestPatterns\TestDefinitionList.cs" />
+    <Compile Include="TestPatterns\TestGap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPatterns\TestIteration.cs" />
+    <Compile Include="TestPatterns\TestLogic.cs" />
+    <Compile Include="TestPatterns\TestMatch.cs" />
+    <Compile Include="TestPatterns\TestMotif.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPatterns\TestProfile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPatterns\TestProfileAll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPatterns\TestProfileBest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPatterns\TestProfileFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPatterns\TestProsite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPatterns\TestPWM.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPatterns\TestRegularExp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPatterns\TestRepeat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPatterns\TestSeriesAll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPatterns\TestSeriesBest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPatterns\TestSetALL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPatterns\TestSetBest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPatterns\TestUse.cs" />
+    <Compile Include="TestPatterns\TestVoid.cs" />
+    <Compile Include="TestReader\TestMBFReader.cs" />
+    <Compile Include="TestSatistic\TestHistogramSymbol.cs" />
+    <Compile Include="TestSequence.Annotation\TestAnnotation.cs" />
+    <Compile Include="TestSequence.Annotation\TestAnnotationList.cs" />
+    <Compile Include="TestSequence.List\TestAnnotatedList.cs" />
+    <Compile Include="TestSequence.List\TestFeatureList.cs" />
+    <Compile Include="TestSequence.List\TestRegionList.cs" />
+    <Compile Include="TestSequence.List\TestSequenceList.cs" />
+    <Compile Include="TestSequence\TestFeature.cs" />
+    <Compile Include="TestSequence\TestRegion.cs" />
+    <Compile Include="TestSequence\TestSequence.cs" />
+    <Compile Include="TestSymbol\TestSymbol.cs" />
+    <Compile Include="TestSymbol\TestSymbolAA.cs" />
+    <Compile Include="TestSymbol\TestSymbolArray.cs" />
+    <Compile Include="TestSymbol\TestSymbolMeta.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

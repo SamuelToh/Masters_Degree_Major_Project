@@ -1,0 +1,15 @@
+<OutOfBrowserSettings ShortName="BioPatMLEditor Application" EnableGPUAcceleration="False" ShowInstallMenuItem="True">
+  <OutOfBrowserSettings.Blurb>BioPatMLEditor Application on your desktop; at home, at work or on the go.</OutOfBrowserSettings.Blurb>
+  <OutOfBrowserSettings.WindowSettings>
+    <WindowSettings Title="BioPatMLEditor Application" Height="700" Width="1200" />
+  </OutOfBrowserSettings.WindowSettings>
+  <OutOfBrowserSettings.SecuritySettings>
+    <SecuritySettings ElevatedPermissions="Required" />
+  </OutOfBrowserSettings.SecuritySettings>
+  <OutOfBrowserSettings.Icons>
+    <Icon Size="16,16">ImgResources/1616Bio.png</Icon>
+    <Icon Size="32,32">ImgResources/3232Bio.png</Icon>
+    <Icon Size="48,48">ImgResources/4848bio.png</Icon>
+    <Icon Size="128,128">ImgResources/128128bio.png</Icon>
+  </OutOfBrowserSettings.Icons>
+</OutOfBrowserSettings>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition>
+
+    <Prosite  name = "Leucine-zipper" prosite = "C-x(2)-C-x(6)-C-x(5,6)-C-x(2)-C-x(6)-C" alphabet = "AA" />
+
+  </Definition>
+</BioPatML>

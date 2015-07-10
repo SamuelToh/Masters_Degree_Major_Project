@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition>
+
+    <Series  name = "canonical sigma70-promoter" threshold = "0.7" mode = "BEST">
+      <Motif  name = "-35element" motif = "ttgaca" threshold = "0.5" alphabet = "DNA" />
+      <Gap minimum="15" maximum="21" impact="0.0"/>
+      <Motif  name = "-10element" motif = "tataat" threshold = "0.7" alphabet = "DNA" />
+    </Series>
+
+  </Definition>
+</BioPatML>

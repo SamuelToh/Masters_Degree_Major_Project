@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition name="Motif">
+
+    <Motif  name = "mvvvvvvvvvvvvvveeeeerrotif" monkey = "ttgaca" kaboomz = "0.9" threshold = "98.7" alphabet = "DNA" />
+
+  </Definition>
+</BioPatML>

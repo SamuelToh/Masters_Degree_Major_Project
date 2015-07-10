@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition name="Any">
+
+    <Any  name = "any" minimum = "6" maximum = "8" increment = "1.1" impact = "0.9" />
+
+  </Definition>
+</BioPatML>

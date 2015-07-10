@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6d3dbb47-ea44-4947-8c50-9cfc086bbe07" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://bio.mquter.qut.edu.au/BioPatML2010/BioPatMLDataService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BioPatMLDataService1.disco" MetadataType="Disco" ID="fd894884-c543-46c4-b65b-1d9f1b15f265" SourceId="1" SourceUrl="http://bio.mquter.qut.edu.au/BioPatML2010/BioPatMLDataService.svc?disco" />
+    <MetadataFile FileName="BioPatMLDataService4.xsd" MetadataType="Schema" ID="c89a7a39-ba14-44fa-914c-78f350f72438" SourceId="1" SourceUrl="http://bio.mquter.qut.edu.au/BioPatML2010/BioPatMLDataService.svc?xsd=xsd2" />
+    <MetadataFile FileName="BioPatMLDataService2.wsdl" MetadataType="Wsdl" ID="40178185-ffaa-4f9f-b75a-2cd103f7ad69" SourceId="1" SourceUrl="http://bio.mquter.qut.edu.au/BioPatML2010/BioPatMLDataService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="BioPatMLDataService41.xsd" MetadataType="Schema" ID="7bf56d84-81a9-4d3c-9d99-71ad0db3c211" SourceId="1" SourceUrl="http://bio.mquter.qut.edu.au/BioPatML2010/BioPatMLDataService.svc?xsd=xsd0" />
+    <MetadataFile FileName="BioPatMLDataService42.xsd" MetadataType="Schema" ID="d5e0de3e-bf45-435d-bb60-28f890744a4a" SourceId="1" SourceUrl="http://bio.mquter.qut.edu.au/BioPatML2010/BioPatMLDataService.svc?xsd=xsd3" />
+    <MetadataFile FileName="BioPatMLDataService43.xsd" MetadataType="Schema" ID="7787d996-c945-410d-a273-bba91c0ab523" SourceId="1" SourceUrl="http://bio.mquter.qut.edu.au/BioPatML2010/BioPatMLDataService.svc?xsd=xsd1" />
+    <MetadataFile FileName="BioPatMLDataService21.wsdl" MetadataType="Wsdl" ID="3ec30080-732e-45c6-aa5f-97d5996827e4" SourceId="1" SourceUrl="http://bio.mquter.qut.edu.au/BioPatML2010/BioPatMLDataService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

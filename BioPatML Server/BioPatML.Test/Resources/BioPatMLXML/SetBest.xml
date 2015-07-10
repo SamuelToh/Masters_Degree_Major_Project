@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition>
+
+    <Set  name = "setbest" mode = "BEST" impact = "0.9" threshold = "0.7">
+      <Motif  name = "motif1" motif = "ttc" impact = "1" threshold = "1.0" alphabet = "DNA" />
+      <Motif  name = "motif2" motif = "aaa" impact = "1" threshold = "1.0" alphabet = "DNA" />
+      <Regex  name = "regex1" regex = "cct" case = "INSENSITIVE" impact = "1" />
+    </Set>
+
+  </Definition>
+</BioPatML>

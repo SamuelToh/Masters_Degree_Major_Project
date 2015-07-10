@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/QUT.Bio.BioPatMLDataRepository.DataContract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/QUT.Bio.BioPatMLDataRepository.DataContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="DefinitionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DefinitionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MainPatternId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MainPatternName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MainPatternType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DefinitionInfo" nillable="true" type="tns:DefinitionInfo" />
+</xs:schema>

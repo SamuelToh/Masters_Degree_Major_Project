@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition>
+
+    <Block  name = "Pribnow-box" threshold = "0.7" alphabet = "DNA" >
+      <Sequence >TATAAT</Sequence>
+      <Sequence >TAAAAT</Sequence>
+      <Sequence >TATGAT</Sequence>
+      <Sequence >TATAAA</Sequence>
+      <Sequence >TCGAAT</Sequence>
+    </Block>
+
+  </Definition>
+</BioPatML>

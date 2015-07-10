@@ -1,0 +1,193 @@
+﻿<UserControl x:Class="BioPatMLEditor.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:resultPanel="clr-namespace:BioPatMLEditor.ResultsPanel"
+    xmlns:editorMenu="clr-namespace:BioPatMLEditor.MainMenuControl"
+    xmlns:editorParserWidgets="clr-namespace:BioPatMLEditor.MBFParserControl"
+    xmlns:editorSearchPanel="clr-namespace:BioPatMLEditor.SearchControl"
+    xmlns:editorPatternControls="clr-namespace:BioPatMLEditor.PatternControls"
+    xmlns:System="clr-namespace:System;assembly=mscorlib"
+             Width="auto"
+             Height="auto"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <Storyboard x:Name="Storyboard1">
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="textBlock" Storyboard.TargetProperty="(TextBlock.Text)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01" Value="a"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.1000000" Value="a"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03" Value="a a"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:04" Value="a a c"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05" Value="a a c t"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:06" Value="a a c t t"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:07" Value="a a c t t t"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:07.9000000" Value="a a c t t t g"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:08.9000000" Value="a a c t t t g g"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:10" Value="a a c t t t g g a"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:11" Value="a a c t t t g g a g"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:11.9000000" Value="a a c t t t g g a g a"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:12.9000000" Value="a a c t t t g g a g a c"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="textBlock" Storyboard.TargetProperty="(Canvas.ZIndex)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01">
+                    <DiscreteObjectKeyFrame.Value>
+                        <System:Int32>2</System:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="textBlock" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.1000000" Value="-10"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-23"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04" Value="-32"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:05" Value="-45"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:06" Value="-58"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:07" Value="-68"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:07.9000000" Value="-72"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:08.9000000" Value="-84"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:10" Value="-96"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:11" Value="-109"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:11.9000000" Value="-119.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:12.9000000" Value="-127.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:13.9000000" Value="-127.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="textBlock" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.1000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="textBlock" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:07.9000000" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:08.9000000" Value="1.125"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:10" Value="1.25"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:11" Value="1.385"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:11.9000000" Value="1.494"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:12.9000000" Value="1.577"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:13.9000000" Value="1.577"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="textBlock" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame KeyTime="00:00:13.9000000" Value="#FFF6F6F6"/>
+                <EasingColorKeyFrame KeyTime="00:00:15" Value="#FFF20000"/>
+                <EasingColorKeyFrame KeyTime="00:00:15.9000000" Value="White"/>
+                <EasingColorKeyFrame KeyTime="00:00:16.9000000" Value="Red"/>
+                <EasingColorKeyFrame KeyTime="00:00:17.9000000" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="textBlock1" Storyboard.TargetProperty="(Canvas.ZIndex)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:15.9000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <System:Int32>4</System:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:16.9000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <System:Int32>0</System:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:18">
+                    <DiscreteObjectKeyFrame.Value>
+                        <System:Int32>4</System:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="Shine">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="txtblkProjTitle">
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="2"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="txtblkProjTitle">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Visible</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:2">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Visible</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        	</ObjectAnimationUsingKeyFrames>
+        	<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="txtblkProjTitle">
+        		<EasingColorKeyFrame KeyTime="0:0:2" Value="White"/>
+        		<EasingColorKeyFrame KeyTime="0:0:3" Value="#FFC2C2C2"/>
+        	</ColorAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <ScrollViewer  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <!-- we want a scrollbar to indicate when to allow scrolling-->
+        <!--<Canvas Height="auto" Width="800">-->
+        <Grid x:Name="LayoutRoot" Height="830">
+            <!-- BG Properties -->
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0A141D" Offset="0.366"/>
+                    <GradientStop Color="#FF0E0D0D"/>
+                    <GradientStop Color="#FF0B0C0E" Offset="0.203"/>
+                    <GradientStop Color="#FF091623" Offset="0.591"/>
+                    <GradientStop Color="#FF10263B" Offset="0.849"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <!-- Grid properties, similiar to HTML table props <tr> <td> -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.ColumnSpan="2" Grid.Row="0" Orientation="Vertical" Margin="0,0,0,38">
+                <StackPanel  Orientation="Horizontal" 
+                    Margin="15,15"  HorizontalAlignment="Left">
+
+                    <Image Source="/BioPatMLEditor;component/ImgResources/6464Bio.png"  Stretch="Fill" 
+                            Width="32" Height="32" x:Name="imgBioPatMLLogo" VerticalAlignment="Top"  HorizontalAlignment="Left" Margin="0,6,0,0">
+                    	<Image.Effect>
+                    		<DropShadowEffect/>
+                    	</Image.Effect>
+                    </Image>
+                    <TextBlock x:Name="txtblkProjTitle" Text="BioPatML Editor 2.0" FontSize="32" Foreground="#FFBEB7B7" >
+                    	<TextBlock.Effect>
+                    		<DropShadowEffect Color="#FF494848"/>
+                    	</TextBlock.Effect>
+                    </TextBlock>
+                    <!-- img hack -->
+                    <Image Source="ImgResources/BioPatML.png"  Stretch="Fill" 
+                            Width="0" Height="0" VerticalAlignment="Top"  HorizontalAlignment="Left" Margin="0,6,0,0"/>
+                    <Image Source="ImgResources/genbankParser.png"  Stretch="Fill" 
+                            Width="0" Height="0" VerticalAlignment="Top"  HorizontalAlignment="Left" Margin="0,6,0,0"/>
+                </StackPanel>
+                <Canvas Grid.ColumnSpan="2">
+                	<Canvas.Effect>
+                		<DropShadowEffect/>
+                	</Canvas.Effect>
+                    <Rectangle x:Name="rectangle" Stroke="Black" Height="5" VerticalAlignment="Top" Canvas.Left="0" Canvas.Top="0" Width="2000" HorizontalAlignment="Left">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFA25012" Offset="0.474"/>
+                                <GradientStop Color="#FFC36200" Offset="1"/>
+                                <GradientStop Color="#FFA25012" Offset="0.335"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Canvas>
+            </StackPanel>
+
+            <editorParserWidgets:MBFParserBox Margin="0,85,0,5" Height="140" x:Name="mbfParserBox" />
+            <editorMenu:NavigationControl Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right" Height="160" Margin="0,70,111,0" Width="584" />
+            <editorSearchPanel:SearchPanel x:Name="editorController" Grid.Column="2" Margin="-107,80,-73,0" VerticalAlignment="Top" Height="150" />
+
+            <Canvas Grid.Column="0" Grid.ColumnSpan="3" x:Name="panelRepository" Grid.Row="1" Grid.RowSpan="2" Margin="0" Height="600">
+                <editorPatternControls:PatternRepository x:Name="UCRepository" Canvas.Top="0"  Canvas.Left="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <resultPanel:ResultPanel Visibility="Collapsed" Margin="0,-120,0,0" x:Name="EditorResultPanel" Canvas.ZIndex="1" Canvas.Top="0" Canvas.Left="150"></resultPanel:ResultPanel>
+                <editorPatternControls:PatternBuilderPanel x:Name="panelPatternBuilder" Canvas.Top="0" Canvas.Left="312" Background="#FF29305A" Width="968"/>
+            </Canvas>
+            
+        </Grid>
+
+    </ScrollViewer>
+</UserControl>

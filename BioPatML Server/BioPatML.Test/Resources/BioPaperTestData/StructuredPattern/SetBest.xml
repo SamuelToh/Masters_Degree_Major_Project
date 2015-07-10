@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition>
+
+    <Set  name = "nuclear localization signal" mode = "BEST" threshold = "0.5">
+      <Regex  name = "NLS:144" regex = "RKCLQAGMNLEARKTKK"  />
+      <Regex  name = "NLS:145" regex = "RKKRKR"  />
+      <Regex  name = "NLS:146" regex = "RKR[PLQMN]R[PLQMN]R"  />
+    </Set>
+
+  </Definition>
+</BioPatML>

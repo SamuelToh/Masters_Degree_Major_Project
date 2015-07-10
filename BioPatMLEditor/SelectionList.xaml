@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="BioPatMLEditor.SelectionList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:util="clr-namespace:QUT.Bio.Util;assembly=QUT.Bio"
+             d:DesignHeight="300"
+             d:DesignWidth="400">
+
+    <!--- I was trying to do something elaborate here but it didn't pan out. Maybe try again later. LB. -->
+    <!--<util:DataGrid x:Name="datagrid"
+                   AutoGenerateColumns="False"
+                   AlternatingRowBackground="White"
+                   RowBackground="White"
+                   GridLinesVisibility="None"
+                   HorizontalAlignment="Stretch"
+                   SelectionMode="Extended"
+                   VerticalAlignment="Stretch"
+                   Margin="0 0 5 0"
+                   Background="White"
+                   BorderBrush="DarkGray"
+                   AreRowDetailsFrozen="False">
+        <util:DataGrid.Columns>
+            <util:DataGridCheckBoxColumn Header="Selected"
+                                         IsReadOnly="False"
+                                         Binding="{Binding Selected, Mode=TwoWay}"
+                                         CanUserReorder="True"
+                                         FrameworkElement.
+                                         />
+            <util:DataGridTextColumn Header="Name"
+                                     Binding="{Binding Name}"
+                                     CanUserReorder="True"
+                                     IsReadOnly="True"
+                                     MinWidth="200" />
+        </util:DataGrid.Columns>
+    </util:DataGrid>-->
+
+    <UserControl.Resources>
+        <DataTemplate x:Key="listBoxTemplate">
+            <StackPanel Orientation="Horizontal">
+                <CheckBox IsChecked="{Binding Selected, Mode=TwoWay}"
+                          Margin="0 0 5 0" />
+                <TextBlock Text="{Binding Name}" />
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <ListBox x:Name="listbox"
+             HorizontalAlignment="Stretch"
+             VerticalAlignment="Stretch"
+             SelectionChanged="SelectionChanged"
+             ItemTemplate="{StaticResource listBoxTemplate}">
+    </ListBox>
+</UserControl>

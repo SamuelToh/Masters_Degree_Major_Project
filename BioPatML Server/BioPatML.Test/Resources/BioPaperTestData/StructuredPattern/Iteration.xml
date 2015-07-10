@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition name="Iterator">
+
+    <Iteration name="iterationx" minimum="2" maximum="3" threshold="1.0">
+      <Motif alphabet="DNA" motif="GA" threshold="1.0"/>
+    </Iteration>
+    
+
+  </Definition>
+</BioPatML>

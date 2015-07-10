@@ -1,0 +1,34 @@
+﻿<!--
+<configuration>
+    <system.serviceModel>
+        <extensions />
+    </system.serviceModel>
+</configuration>
+-->
+<configuration>
+  <system.serviceModel>
+    <extensions />
+    <bindings>
+      <customBinding>
+        <binding name="CustomBinding_BioPatMLDataService" closeTimeout="00:15:00"
+          openTimeout="00:15:00" receiveTimeout="00:15:00" sendTimeout="00:15:00">
+          <binaryMessageEncoding />
+          <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+        </binding>
+        <binding name="CustomBinding_Service1" closeTimeout="00:15:00"
+          openTimeout="00:15:00" receiveTimeout="00:15:00" sendTimeout="00:15:00">
+          <binaryMessageEncoding />
+          <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+        </binding>
+      </customBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://bio.mquter.qut.edu.au/BioPatML2010/BioPatMLDataService.svc"
+        binding="customBinding" bindingConfiguration="CustomBinding_BioPatMLDataService"
+        contract="BioPatMLDataRepo.BioPatMLDataService" name="CustomBinding_BioPatMLDataService" />
+      <endpoint address="http://bio.mquter.qut.edu.au/BioPatML2010/Service1.svc"
+        binding="customBinding" bindingConfiguration="CustomBinding_Service1"
+        contract="ServiceReference1.Service1" name="CustomBinding_Service1" />
+    </client>
+  </system.serviceModel>
+</configuration>

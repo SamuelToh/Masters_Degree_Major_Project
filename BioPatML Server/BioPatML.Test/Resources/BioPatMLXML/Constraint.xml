@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition>
+
+    <Series mode="BEST" threshold="0.0">
+      <Motif motif="KK" alphabet="AA" threshold="1.0"/>
+      <Constraint name="constraint" impact="0.9" position="END" offset="-2" />
+    </Series>
+
+  </Definition>
+</BioPatML>

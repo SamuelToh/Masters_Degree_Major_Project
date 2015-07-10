@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7B8EB081-0C05-4CD9-9CF3-6474A3F95BD9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QUT.Bio.BioPatML</RootNamespace>
+    <AssemblyName>QUT.Bio.BioPatML</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\QUT.Bio.BioPatML.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bio, Version=1.0.0.32418, Culture=neutral, PublicKeyToken=13335e9abfbf69d0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External dependencies\Bio.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alphabets\Alphabet.cs" />
+    <Compile Include="Alphabets\AlphabetAA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alphabets\AlphabetDNA.cs" />
+    <Compile Include="Alphabets\AlphabetFactory.cs" />
+    <Compile Include="Alphabets\AlphabetLatin.cs" />
+    <Compile Include="Alphabets\AlphabetRNA.cs" />
+    <Compile Include="Common.Structures\PrimitiveParse.cs" />
+    <Compile Include="Common.XML\XMLHelper.cs" />
+    <Compile Include="Parsers\MBFParser.cs" />
+    <Compile Include="Patterns.Reader\BioPatMLPatternReader.cs" />
+    <Compile Include="Patterns\Alignment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\Any.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\Block.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\Composition.cs" />
+    <Compile Include="Patterns\CompositionALL.cs" />
+    <Compile Include="Patterns\CompositionBEST.cs" />
+    <Compile Include="Patterns\Constraint.cs" />
+    <Compile Include="Patterns\Definition.cs" />
+    <Compile Include="Patterns\DefinitionList.cs" />
+    <Compile Include="Patterns\Gap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\IMatcher.cs" />
+    <Compile Include="Patterns\IPattern.cs" />
+    <Compile Include="Patterns\IRepeatMatcher.cs" />
+    <Compile Include="Patterns\Iteration.cs" />
+    <Compile Include="Patterns\Logic.cs" />
+    <Compile Include="Patterns\Match.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\Motif.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\Pattern.cs" />
+    <Compile Include="Patterns\PatternComplex.cs" />
+    <Compile Include="Patterns\PatternFlexible.cs" />
+    <Compile Include="Patterns\PatternList.cs" />
+    <Compile Include="Patterns\PatternListEnumerator.cs" />
+    <Compile Include="Patterns\Profile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\ProfileAll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\ProfileBest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\ProfileElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\ProfileFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\Prosite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\PWM.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\RegularExp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\Repeat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\RepeatBase.cs" />
+    <Compile Include="Patterns\RepeatDirect.cs" />
+    <Compile Include="Patterns\RepeatInverted.cs" />
+    <Compile Include="Patterns\Series.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\SeriesAll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\SeriesBest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\Set.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\SetAll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\SetBest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Patterns\Use.cs" />
+    <Compile Include="Patterns\VoidPattern.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Readers\BioFastaReader.cs" />
+    <Compile Include="Readers\BioPatMBF_Reader.cs" />
+    <Compile Include="Readers\ReaderBase.cs" />
+    <Compile Include="Sequences.Annotations\Annotation.cs" />
+    <Compile Include="Sequences.Annotations\AnnotationList.cs" />
+    <Compile Include="Sequences.List\AnnotatedList.cs" />
+    <Compile Include="Sequences.List\FeatureList.cs" />
+    <Compile Include="Sequences.List\IAnnotated.cs" />
+    <Compile Include="Sequences.List\RegionList.cs" />
+    <Compile Include="Sequences.List\SequenceList.cs" />
+    <Compile Include="Sequences\Feature.cs" />
+    <Compile Include="Sequences\ISequence.cs" />
+    <Compile Include="Sequences\SequenceHelper.cs" />
+    <Compile Include="Sequences\Region.cs" />
+    <Compile Include="Sequences\Sequence.cs" />
+    <Compile Include="Common.Structures\HistogramChar.cs" />
+    <Compile Include="Common.Structures\MapChar.cs" />
+    <Compile Include="Common.Structures\SArray.cs" />
+    <Compile Include="Sequences\SequenceEnumerator.cs" />
+    <Compile Include="Statistic\HistogramSymbol.cs" />
+    <Compile Include="Symbols.Accessor\AccessorBase.cs" />
+    <Compile Include="Symbols.Accessor\AccessorCircular.cs" />
+    <Compile Include="Symbols.Accessor\AccessorComplement.cs" />
+    <Compile Include="Symbols.Accessor\AccessorFactory.cs" />
+    <Compile Include="Symbols.Accessor\AccessorLinear.cs" />
+    <Compile Include="Symbols.Accessor\AccessorTransparent.cs" />
+    <Compile Include="Symbols.Accessor\IAccessor.cs" />
+    <Compile Include="Symbols.Indexer\IIndexer.cs" />
+    <Compile Include="Symbols.Indexer\IndexerDirect.cs" />
+    <Compile Include="Symbols.Indexer\Indexer.cs" />
+    <Compile Include="Symbols.Indexer\IndexerFactory.cs" />
+    <Compile Include="Symbols.Indexer\IndexerReverse.cs" />
+    <Compile Include="Symbols\ISymbolArray.cs" />
+    <Compile Include="Symbols\Symbol.cs" />
+    <Compile Include="Symbols\SymbolAA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Symbols\SymbolArray.cs" />
+    <Compile Include="Symbols\SymbolMeta.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BioPatML_Schema\BioPatML.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

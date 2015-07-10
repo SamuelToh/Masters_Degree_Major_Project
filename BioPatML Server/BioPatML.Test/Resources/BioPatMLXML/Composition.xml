@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition name="Composition">
+
+    <Composition name="hydrophobic region" impact="0.9"
+          minimum="15" maximum="25" increment="1.4"
+          mode="BEST" alphabet="AA" threshold="0.7" >
+      <Symbol letter="V" weight="1.0" />
+      <Symbol letter="I" weight="2.2" />
+      <Symbol letter="L" weight="3.3" />
+      <Default weight="0.0" />
+    </Composition>
+
+  </Definition>
+</BioPatML>

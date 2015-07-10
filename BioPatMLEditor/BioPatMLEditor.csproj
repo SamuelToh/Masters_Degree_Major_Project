@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E28ADFA4-2972-445B-AD13-F8CF9E4369FC}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BioPatMLEditor</RootNamespace>
+    <AssemblyName>BioPatMLEditor</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>BioPatMLEditor.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>BioPatMLEditor.App</SilverlightAppEntry>
+    <TestPageFileName>SilverBioPatMLEditorTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>true</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20310.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Drawing" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.ComponentModel.Composition, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ComponentModel.Composition.Initialization, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.DataForm.Toolkit, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Documents\Visual Studio 2010\Projects\SilverBioPatMLEditor\SilverBioPatMLEditor\SilverBioPatMLEditor\Bin\Debug\System.Windows.Controls.Data.DataForm.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Data.Toolkit, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Documents\Visual Studio 2010\Projects\SilverBioPatMLEditor\SilverBioPatMLEditor\SilverBioPatMLEditor\Bin\Debug\System.Windows.Controls.Data.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Navigation, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuControl\NavigationControl.xaml.cs">
+      <DependentUpon>NavigationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MBFParserControl\FastaParserWidget.cs" />
+    <Compile Include="MBFParserControl\GenbankParserWidget.cs" />
+    <Compile Include="MBFParserControl\MBFParserBox.xaml.cs">
+      <DependentUpon>MBFParserBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MBFParserControl\ParsingLogic\MBFParserEngine.cs" />
+    <Compile Include="MBFParserControl\Widgets.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PatternControls\BioPatXMLBuilder.cs" />
+    <Compile Include="PatternControls\ContextMenu\PatternAddMenu.cs" />
+    <Compile Include="PatternControls\ContextMenu\BaseContextMenu.cs" />
+    <Compile Include="PatternControls\ContextMenu\MainMenu.cs" />
+    <Compile Include="PatternControls\ContextMenu\PatternRemoveMenu.cs" />
+    <Compile Include="PatternControls\PatternAttrEditor\AttributeEditor.xaml.cs">
+      <DependentUpon>AttributeEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PatternControls\PatternModels\Alignment.cs" />
+    <Compile Include="PatternControls\PatternModels\Any.cs" />
+    <Compile Include="PatternControls\PatternModels\Block.cs" />
+    <Compile Include="PatternControls\PatternModels\BlockElement.cs" />
+    <Compile Include="PatternControls\PatternModels\Composition.cs" />
+    <Compile Include="PatternControls\PatternModels\CompositionElement.cs" />
+    <Compile Include="PatternControls\PatternModels\Constraint.cs" />
+    <Compile Include="PatternControls\PatternModels\IPattern.cs" />
+    <Compile Include="PatternControls\PatternModels\Logic.cs" />
+    <Compile Include="PatternControls\PatternModels\PairingElement.cs" />
+    <Compile Include="PatternControls\PatternModels\PWM.cs" />
+    <Compile Include="PatternControls\PatternModels\SubElements.cs" />
+    <Compile Include="PatternControls\PatternModels\Iteration.cs" />
+    <Compile Include="PatternControls\PatternModels\Prosite.cs" />
+    <Compile Include="PatternControls\PatternModels\PWMRow.cs" />
+    <Compile Include="PatternControls\PatternModels\RecursivePatterns.cs" />
+    <Compile Include="PatternControls\PatternModels\RegionalPatterns.cs" />
+    <Compile Include="PatternControls\PatternModels\Repeat.cs" />
+    <Compile Include="PatternControls\PatternModels\SearchPatterns.cs" />
+    <Compile Include="PatternControls\PatternModels\Series.cs" />
+    <Compile Include="PatternControls\PatternModels\Set.cs" />
+    <Compile Include="PatternControls\PatternModels\StructuredPattern.cs" />
+    <Compile Include="PatternControls\PatternModels\Void.cs" />
+    <Compile Include="PatternControls\PatternModels\Gap.cs" />
+    <Compile Include="PatternControls\PatternModels\Motif.cs" />
+    <Compile Include="PatternControls\PatternModels\PatternBase.cs" />
+    <Compile Include="PatternControls\PatternBuilderPanel.xaml.cs">
+      <DependentUpon>PatternBuilderPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PatternControls\PatternModels\RegularExp.cs" />
+    <Compile Include="PatternControls\PatternRepoEngine.cs" />
+    <Compile Include="PatternControls\PatternRepoRetriever.cs" />
+    <Compile Include="PatternControls\PatternRepository.xaml.cs">
+      <DependentUpon>PatternRepository.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PatternControls\RepositoryUnit.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultsControl\DisplayEngine\ResultDisplayLogic.cs" />
+    <Compile Include="ResultsControl\ResultPanel.xaml.cs">
+      <DependentUpon>ResultPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchControl\SearchLogic\SearchBot.cs" />
+    <Compile Include="SearchControl\SearchPanel.xaml.cs">
+      <DependentUpon>SearchPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BioPatMLDataRepo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="MainMenuControl\NavigationControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MBFParserControl\MBFParserBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PatternControls\PatternAttrEditor\AttributeEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PatternControls\PatternBuilderPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PatternControls\PatternRepository.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResultsControl\ResultPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchControl\SearchPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Service References\BioPatMLDataRepo\BioPatMLDataService2.wsdl" />
+    <None Include="Service References\BioPatMLDataRepo\BioPatMLDataService21.wsdl" />
+    <None Include="Service References\BioPatMLDataRepo\BioPatMLDataService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BioPatMLDataRepo\BioPatMLDataService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BioPatMLDataRepo\BioPatMLDataService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BioPatMLDataRepo\BioPatMLDataService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BioPatMLDataRepo\BioPatMLEditor.BioPatMLDataRepo.DefinitionPatternInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\BioPatMLEditor.ServiceReference1.Matched.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\BioPatMLEditor.ServiceReference1.SequenceContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\Service1.wsdl" />
+    <None Include="Service References\ServiceReference1\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\Service11.wsdl" />
+    <None Include="Service References\ServiceReference1\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Resource Include="ImgResources\folder.png" />
+    <Resource Include="ImgResources\EditorGraphic.png" />
+    <Content Include="ImgResources\128128bio.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImgResources\1616Bio.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImgResources\3232Bio.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="ImgResources\6464Bio.png" />
+    <Content Include="ImgResources\4848bio.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Service References\BioPatMLDataRepo\configuration91.svcinfo" />
+    <None Include="Service References\BioPatMLDataRepo\configuration.svcinfo" />
+    <None Include="Service References\BioPatMLDataRepo\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\BioPatMLDataRepo\BioPatMLDataService1.disco" />
+    <None Include="Service References\ServiceReference1\Service1.disco" />
+    <Content Include="ServiceReferences.ClientConfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImgResources\genbankParser.png" />
+    <None Include="Properties\OutOfBrowserSettings.xml" />
+    <Resource Include="ImgResources\BioPatML.png" />
+    <Resource Include="ImgResources\BioPatMLx.gif" />
+    <Content Include="ImgResources\BioPatMLx.ico" />
+    <Content Include="ImgResources\BioPatMLx.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\BioPatMLDataRepo\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

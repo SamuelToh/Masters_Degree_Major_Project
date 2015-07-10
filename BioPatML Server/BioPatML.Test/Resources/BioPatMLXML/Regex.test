@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition name="Regex">
+
+    <Regex  name = "regex" regex = "act" case = "INSENSITIVE" impact = "0.9" />
+
+  </Definition>
+</BioPatML>

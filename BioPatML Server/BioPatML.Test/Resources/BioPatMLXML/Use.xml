@@ -1,0 +1,25 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+	<Definition name="promoter">
+		<Definitions>
+			<Definition name="sigma70" >
+				<!-- sub-definitions -->
+				<Definitions>
+					<Definition name="-10element" >
+						<Motif motif="TATAAT" alphabet="DNA" threshold="0.7" />
+					</Definition>
+					<Definition name="-35element" >
+						<Motif motif="TTGACA" alphabet="DNA" threshold="0.7" />
+					</Definition>
+				</Definitions>
+			</Definition>
+		</Definitions>
+		<Series  name = "series" impact = "0.9" threshold = "0.7" mode = "BEST">
+			<Use name="useTag" definition="sigma70.-35element"/>
+			<Gap name = "gap" minimum = "1" maximum = "3" increment="1.0" impact = "0.0"  />
+			<Use definition ="sigma70.-10element"/>
+		</Series>
+	</Definition>
+</BioPatML>

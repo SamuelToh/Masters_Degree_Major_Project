@@ -1,0 +1,466 @@
+﻿<?xml version="1.0"?>
+<!--  =====================================================================  -->
+<!--                                                                         -->
+<!--  BioPatML (Biological Pattern Markup Language)                          -->
+<!--  XML Schema Definition                                                  -->
+<!--                                                                         -->
+<!--  Version:   1.50 (10.04.07)    Iteration pattern                        -->
+<!--                                Logic pattern                            -->
+<!--                                Alignment pattern                        -->
+<!--  Version:   1.40 (30.03.07)    Composition pattern                      -->
+<!--                                Void pattern                             -->
+<!--                                Increment for Gap,Any                    -->
+<!--                                Anchor -> Constraint                     -->
+<!--                                Use pattern introduced                   -->
+<!--  Version:   1.30 (09.01.07)    Pattern names required                   -->
+<!--                                Definition block around pattern          -->
+<!--                                Annotations inside Definition            -->
+<!--  Version:   1.24 (10.08.06)    Gap length can be negative               -->
+<!--                                Block simplified                         -->
+<!--  Version:   1.23 (12.06.06)    Set has mode, Block pattern              -->
+<!--  Version:   1.22 (06.06.06)    weight renamed to impact                 -->
+<!--                                Element renamed to Region                -->
+<!--                                Pattern annotation                       -->
+<!--  Version:   1.21 (02.12.05)    Changes Set                              -->
+<!--  Version:   1.20 (06.11.05)    Weighted gaps                            -->
+<!--  Version:   1.10 (26.10.05)    Set, Series                              -->
+<!--  Version:   1.00 (08.10.05)    First version                            -->
+<!--                                                                         -->
+<!--  Author:    Stefan Maetschke                                            -->
+<!--  Email:     stefan.maetschke@freenet.de                                 -->
+<!--  Institute: Queensland University of Technology                         -->
+<!--                                                                         -->
+<!--  =====================================================================  -->
+
+
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" version = "1.50">
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">
+      Schema for BioPatML
+      (Biological Pattern Markup Language)
+    </xsd:documentation>
+  </xsd:annotation>
+
+
+
+  <!--  =====================================================================  -->
+  <!--  Complex types                                                          -->
+  <!--  =====================================================================  -->
+
+  <!-- BioPatML ===========================================================  -->
+  <xsd:element name="BioPatML">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Definition" type="Definition" minOccurs="1" maxOccurs="1"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+
+  <!-- Definitions ========================================================  -->
+  <xsd:complexType name="Definitions">
+    <xsd:choice minOccurs="1" maxOccurs="unbounded">
+      <xsd:element name="Definition" type="Definition" />
+      <xsd:element name="Import"     type="Import" />
+    </xsd:choice>
+  </xsd:complexType>
+
+
+  <!-- Definition =========================================================  -->
+  <xsd:complexType  name="Definition">
+    <xsd:sequence>
+      <xsd:element name="Parameters"  type="Parameters"  minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Annotations" type="Annotations" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Definitions" type="Definitions" minOccurs="0" maxOccurs="1"/>
+      <xsd:group ref="Pattern" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+    <xsd:attribute name="name" type="xsd:string" />
+  </xsd:complexType>
+
+
+  <!-- Import =============================================================  -->
+  <xsd:complexType  name="Import">
+    <xsd:attribute name="uri" type="xsd:string"  use="required"/>
+  </xsd:complexType>
+
+
+  <!-- Parameters =========================================================  -->
+  <xsd:complexType name="Parameters">
+    <xsd:sequence>
+      <xsd:element name="Parameter" type="Parameter" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+  <!-- Parameter =========================================================  -->
+  <xsd:complexType  name="Parameter">
+    <xsd:attribute name="name"        type="xsd:string"  use="required"/>
+    <xsd:attribute name="pattern"     type="xsd:string"  use="required"/>
+    <xsd:attribute name="parameter"   type="xsd:string"  use="required"/>
+    <xsd:attribute name="description" type="xsd:string"  default=""/>
+    <xsd:attribute name="validator"   type="xsd:string"  default=""/>
+  </xsd:complexType>
+
+
+  <!-- Annotations =========================================================  -->
+  <xsd:complexType name="Annotations">
+    <xsd:sequence>
+      <xsd:element name="Annotation" type="Annotation" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+  <!-- Annotation =========================================================  -->
+  <xsd:complexType name="Annotation">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+
+  <!-- Pattern ============================================================  -->
+  <xsd:group name="Pattern">
+    <xsd:choice>
+      <xsd:element name="Void"          type="Void"/>
+      <xsd:element name="Alignment"     type="Alignment"/>
+      <xsd:element name="Constraint"    type="Constraint"/>
+      <xsd:element name="Use"           type="Use"/>
+      <xsd:element name="Any"           type="Any"/>
+      <xsd:element name="Gap"           type="Gap"/>
+      <xsd:element name="Motif"         type="Motif"/>
+      <xsd:element name="Prosite"       type="Prosite"/>
+      <xsd:element name="Regex"         type="Regex"/>
+      <xsd:element name="Block"         type="Block"/>
+      <xsd:element name="PWM"           type="PWM"/>
+      <xsd:element name="Composition"   type="Composition"/>
+      <xsd:element name="Repeat"        type="Repeat"/>
+      <xsd:element name="Iteration"     type="Iteration"/>
+      <xsd:element name="Logic"         type="Logic"/>
+      <xsd:element name="Set"           type="Set"/>
+      <xsd:element name="Series"        type="Series"/>
+    </xsd:choice>
+  </xsd:group>
+
+
+
+  <!-- Void ===============================================================  -->
+  <xsd:complexType name="Void">
+    <xsd:attribute name="name"      type="xsd:string"                />
+    <xsd:attribute name="impact"    type="impact"       default="0.0"/>
+  </xsd:complexType>
+
+
+  <!-- Alignment ==========================================================  -->
+  <xsd:complexType name="Alignment">
+    <xsd:attribute name="name"      type="xsd:string"                 />
+    <xsd:attribute name="pattern"   type="xsd:string"   use="required"/>
+    <xsd:attribute name="position"  type="position"     use="required"/>
+    <xsd:attribute name="offset"    type="offset"       default="0"/>
+    <xsd:attribute name="impact"    type="impact"       default="0.0"/>
+  </xsd:complexType>
+
+
+  <!-- Constraint =========================================================  -->
+  <xsd:complexType name="Constraint">
+    <xsd:attribute name="name"       type="xsd:string"                 />
+    <xsd:attribute name="position"   type="position"     use="required"/>
+    <xsd:attribute name="offset"     type="offset"       default="0"/>
+    <xsd:attribute name="impact"     type="impact"       default="0.0"/>
+  </xsd:complexType>
+
+
+  <!-- Use ================================================================  -->
+  <xsd:complexType name="Use">
+    <xsd:attribute name="name"        type="xsd:string"               />
+    <xsd:attribute name="definition"  type="xsd:string" use="required"/>
+  </xsd:complexType>
+
+
+  <!-- Any ================================================================  -->
+  <xsd:complexType name="Any">
+    <xsd:attribute name="name"       type="xsd:string"                />
+    <xsd:attribute name="minimum"    type="length"      use="required"/>
+    <xsd:attribute name="maximum"    type="length"      use="required"/>
+    <xsd:attribute name="increment"  type="increment"   default="1.0"/>
+    <xsd:attribute name="impact"     type="impact"      default="1.0"/>
+  </xsd:complexType>
+
+
+  <!-- Gap ================================================================  -->
+  <xsd:complexType name="Gap">
+    <xsd:sequence>
+      <xsd:element name="Weights" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+    <xsd:attribute name="name"       type="xsd:string"                />
+    <xsd:attribute name="minimum"    type="length"      use="required"/>
+    <xsd:attribute name="maximum"    type="length"      use="required"/>
+    <xsd:attribute name="increment"  type="increment"   default="1.0"/>
+    <xsd:attribute name="threshold"  type="threshold"   default="0.0"/>
+    <xsd:attribute name="impact"     type="impact"      default="1.0"/>
+  </xsd:complexType>
+
+
+  <!-- Motif ==============================================================  -->
+  <xsd:complexType name="Motif">
+    <xsd:attribute name="name"      type="xsd:string"               />
+    <xsd:attribute name="alphabet"  type="alphabet"   use="required"/>
+    <xsd:attribute name="motif"     type="xsd:string" use="required"/>
+    <xsd:attribute name="threshold" type="threshold"  use="required"/>
+    <xsd:attribute name="impact"    type="impact"     default="1.0" />
+  </xsd:complexType>
+
+
+  <!-- Prosite ============================================================  -->
+  <xsd:complexType name="Prosite">
+    <xsd:attribute name="name"      type="xsd:string"               />
+    <xsd:attribute name="alphabet"  type="alphabet"   use="required"/>
+    <xsd:attribute name="prosite"   type="xsd:string" use="required"/>
+    <xsd:attribute name="impact"    type="impact"     default="1.0"/>
+  </xsd:complexType>
+
+
+  <!-- Regex ==============================================================  -->
+  <xsd:complexType name="Regex">
+    <xsd:attribute name="name"      type="xsd:string"                      />
+    <xsd:attribute name="case"      type="case"       default="INSENSITIVE"/>
+    <xsd:attribute name="regex"     type="xsd:string" use="required"/>
+    <xsd:attribute name="impact"    type="impact"     default="1.0"/>
+  </xsd:complexType>
+
+
+  <!-- Repeat =============================================================  -->
+  <xsd:complexType name="Repeat">
+    <xsd:sequence>
+      <xsd:element name="Pairing"  type="RepeatPairing" minOccurs="0" maxOccurs="400"/>
+    </xsd:sequence>
+    <xsd:attribute name="name"      type="xsd:string"                />
+    <xsd:attribute name="pattern"   type="xsd:string"  use="required"/>
+    <xsd:attribute name="mode"      type="repeatmode"  use="required"/>
+    <xsd:attribute name="threshold" type="threshold"   use="required"/>
+    <xsd:attribute name="impact"    type="impact"      default="1.0"/>
+  </xsd:complexType>
+
+  <!-- RepeatPairing =======================================================  -->
+  <xsd:complexType name="RepeatPairing">
+    <xsd:attribute name="original"  type="letter"      use="required"/>
+    <xsd:attribute name="repeat"    type="letter"      use="required"/>
+    <xsd:attribute name="weight"    type="weight"      default="1.0"/>
+  </xsd:complexType>
+
+
+  <!-- Block ==============================================================  -->
+  <xsd:complexType name="Block">
+    <xsd:sequence>
+      <xsd:element name="Sequence"  type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <xsd:attribute name="name"      type="xsd:string"               />
+    <xsd:attribute name="alphabet"  type="alphabet"   use="required"/>
+    <xsd:attribute name="threshold" type="threshold"  use="required"/>
+    <xsd:attribute name="impact"    type="impact"     default="1.0" />
+  </xsd:complexType>
+
+
+  <!-- PWM ================================================================  -->
+  <xsd:complexType name="PWM">
+    <xsd:sequence>
+      <xsd:element name="Row" type="PWMRow" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <xsd:attribute name="name"      type="xsd:string"               />
+    <xsd:attribute name="alphabet"  type="alphabet"   use="required"/>
+    <xsd:attribute name="threshold" type="threshold"  use="required"/>
+    <xsd:attribute name="impact"    type="impact"     default="1.0" />
+  </xsd:complexType>
+
+  <!-- Row of a PWM =======================================================  -->
+  <xsd:complexType name="PWMRow">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="letter"  type="letter"   use="required"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+
+  <!-- Composition ========================================================  -->
+  <xsd:complexType name="Composition">
+    <xsd:sequence>
+      <xsd:element name="Symbol"  type="CompositionSymbol"  minOccurs="1" maxOccurs="24"/>
+      <xsd:element name="Default" type="CompositionDefault" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+    <xsd:attribute name="name"       type="xsd:string"                />
+    <xsd:attribute name="minimum"    type="length"      use="required"/>
+    <xsd:attribute name="maximum"    type="length"      use="required"/>
+    <xsd:attribute name="increment"  type="increment"   default="1.0" />
+    <xsd:attribute name="alphabet"   type="alphabet"    use="required"/>
+    <xsd:attribute name="mode"       type="mode"        use="required"/>
+    <xsd:attribute name="threshold"  type="threshold"   use="required"/>
+    <xsd:attribute name="impact"     type="impact"      default="1.0" />
+  </xsd:complexType>
+
+  <!-- SymbolWeight =======================================================  -->
+  <xsd:complexType name="CompositionSymbol">
+    <xsd:attribute name="letter"  type="letter"      use="required"/>
+    <xsd:attribute name="weight"  type="xsd:decimal" default="1.0"/>
+  </xsd:complexType>
+
+  <!-- DefaultWeight ======================================================  -->
+  <xsd:complexType name="CompositionDefault">
+    <xsd:attribute name="weight"  type="xsd:decimal" use="required"/>
+  </xsd:complexType>
+
+
+  <!-- Iteration ==========================================================  -->
+  <xsd:complexType name="Iteration">
+    <xsd:group ref="Pattern" minOccurs="1" maxOccurs="10"/>
+    <xsd:attribute name="name"       type="xsd:string"                />
+    <xsd:attribute name="minimum"    type="length"      use="required"/>
+    <xsd:attribute name="maximum"    type="length"      use="required"/>
+    <xsd:attribute name="threshold"  type="threshold"   use="required"/>
+    <xsd:attribute name="impact"     type="impact"      default="1.0" />
+  </xsd:complexType>
+
+
+  <!-- Logic ==============================================================  -->
+  <xsd:complexType name="Logic">
+    <xsd:group ref="Pattern" minOccurs="1" maxOccurs="unbounded"/>
+    <xsd:attribute name="name"      type="xsd:string"               />
+    <xsd:attribute name="operation" type="operation"  use="required"/>
+    <xsd:attribute name="threshold" type="threshold"  use="required"/>
+    <xsd:attribute name="impact"    type="impact"     default="1.0" />
+  </xsd:complexType>
+
+
+  <!-- Set ================================================================  -->
+  <xsd:complexType name="Set">
+    <xsd:group ref="Pattern" minOccurs="1" maxOccurs="unbounded"/>
+    <xsd:attribute name="name"      type="xsd:string"               />
+    <xsd:attribute name="mode"      type="mode"       use="required"/>
+    <xsd:attribute name="threshold" type="threshold"  use="required"/>
+    <xsd:attribute name="impact"    type="impact"     default="1.0" />
+  </xsd:complexType>
+
+
+  <!-- Series =============================================================  -->
+  <xsd:complexType name="Series">
+    <xsd:group ref="Pattern" minOccurs="1" maxOccurs="unbounded"/>
+    <xsd:attribute name="name"      type="xsd:string"               />
+    <xsd:attribute name="mode"      type="mode"       use="required"/>
+    <xsd:attribute name="threshold" type="threshold"  use="required"/>
+    <xsd:attribute name="impact"    type="impact"     default="1.0" />
+  </xsd:complexType>
+
+
+
+
+  <!--  =====================================================================  -->
+  <!--  Simple types                                                           -->
+  <!--  =====================================================================  -->
+
+  <!-- alphabet ===========================================================  -->
+  <xsd:simpleType name="alphabet">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="DNA"/>
+      <xsd:enumeration value="RNA"/>
+      <xsd:enumeration value="AA"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- length =============================================================  -->
+  <xsd:simpleType name="length">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="1"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- increment ==========================================================  -->
+  <xsd:simpleType name="increment">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:minExclusive value="0.0"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- type ===============================================================  -->
+  <xsd:simpleType name="repeatmode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="DIRECT"/>
+      <xsd:enumeration value="INVERTED"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- mode ===============================================================  -->
+  <xsd:simpleType name="mode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ALL"/>
+      <xsd:enumeration value="BEST"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- operation===========================================================  -->
+  <xsd:simpleType name="operation">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="AND"/>
+      <xsd:enumeration value="OR"/>
+      <xsd:enumeration value="EXOR"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- position ===========================================================  -->
+  <xsd:simpleType name="position">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="START"/>
+      <xsd:enumeration value="END"/>
+      <xsd:enumeration value="CENTER"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- case ===============================================================  -->
+  <xsd:simpleType name="case">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="SENSITIVE"/>
+      <xsd:enumeration value="INSENSITIVE"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- threshold ==========================================================  -->
+  <xsd:simpleType name="threshold">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:minInclusive value="0.0"/>
+      <xsd:maxInclusive value="1.0"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- impact =============================================================  -->
+  <xsd:simpleType name="impact">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:minInclusive value="0.0"/>
+      <xsd:maxInclusive value="1.0"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- weight =============================================================  -->
+  <xsd:simpleType name="weight">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:minInclusive value="0.0"/>
+      <xsd:maxInclusive value="1.0"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- letter =============================================================  -->
+  <xsd:simpleType name="letter">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[a-zA-Z]"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- offset ==============================================================  -->
+  <xsd:simpleType name="offset">
+    <xsd:restriction base="xsd:integer">
+    </xsd:restriction>
+  </xsd:simpleType>
+
+</xsd:schema>
+
+<!--  =====================================================================  -->

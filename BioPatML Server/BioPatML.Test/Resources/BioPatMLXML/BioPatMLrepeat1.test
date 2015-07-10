@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition name="Repeat">
+	<Series mode="BEST" threshold="0.0">
+		<Any name="stem" minimum="5" maximum="5" increment="1.0"/>
+		<Motif name="loop" motif="AUUCAW" alphabet="RNA" threshold="1.0"/>
+		<Repeat name="repeat" pattern="stem" mode="INVERTED" threshold="1.0" impact="0.9" >
+			<Pairing original="a" repeat="u" weight="0.0"/>
+			<Pairing original="a" repeat="a" weight="0.1"/>
+			<Pairing original="a" repeat="c" weight="0.2"/>
+			<Pairing original="c" repeat="g" weight="0.3"/>
+			<Pairing original="g" repeat="c" weight="0.4"/>
+			<Pairing original="t" repeat="t" weight="0.5"/>
+		</Repeat>
+	</Series>
+  </Definition>
+</BioPatML>

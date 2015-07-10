@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition>
+
+    <Series  name = "stem-loop" threshold = "0.0" mode = "ALL">
+      <Any  name = "stem" minimum = "4" maximum = "5" />
+      <Gap  minimum="7" maximum="9"/>
+      <Repeat pattern="stem" mode="INVERTED" threshold="0.7"/>
+    </Series>
+
+  </Definition>
+</BioPatML>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+
+<BioPatML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="BioPatML.xsd">
+  <Definition name="Repeat">
+	<Series mode="ALL" threshold="1.0">
+		<Motif  name = "stem" motif = "aa" impact = "0.2" threshold = "0.3" alphabet = "DNA" />
+		<Repeat name="repeat" pattern="stem" mode="INVERTED" threshold="0.3">
+        		<Pairing original="c" repeat="c" weight="1.0"/>
+        		<Pairing original="A" repeat="a" weight="1.0"/>
+        		<Pairing original="a" repeat="c" weight="1.0"/>
+        		<Pairing original="c" repeat="g" weight="1.0"/>
+        		<Pairing original="g" repeat="c" weight="1.0"/>
+        		<Pairing original="t" repeat="t" weight="1.0"/>
+		</Repeat>
+	  </Series>
+  </Definition>
+</BioPatML>
