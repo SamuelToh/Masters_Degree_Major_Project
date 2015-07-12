@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="MQuter_eLabApp.Web.Workflow_WCF.WorkflowService" CodeBehind="WorkflowService.svc.cs" %>

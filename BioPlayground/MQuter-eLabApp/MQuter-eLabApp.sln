@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQuter-eLabApp", "MQuter-eLabApp\MQuter-eLabApp.csproj", "{7C61A66F-4D5B-40D4-B850-E9439D77312C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2FE38084-028A-4803-9D84-28555F890961} = {2FE38084-028A-4803-9D84-28555F890961}
+		{F4A1D298-F7E9-4F43-AD7E-B88E69D685B8} = {F4A1D298-F7E9-4F43-AD7E-B88E69D685B8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQuter-eLabApp.Web", "MQuter-eLabApp.Web\MQuter-eLabApp.Web.csproj", "{2FE38084-028A-4803-9D84-28555F890961}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F4A1D298-F7E9-4F43-AD7E-B88E69D685B8} = {F4A1D298-F7E9-4F43-AD7E-B88E69D685B8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TridentConnector", "TridentConnector\TridentConnector.csproj", "{F4A1D298-F7E9-4F43-AD7E-B88E69D685B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MquterELab-UITest", "MquterELab-UITest\MquterELab-UITest.csproj", "{62CFDBBE-2044-423C-842D-93A4C9967A0F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2FE38084-028A-4803-9D84-28555F890961} = {2FE38084-028A-4803-9D84-28555F890961}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C61A66F-4D5B-40D4-B850-E9439D77312C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C61A66F-4D5B-40D4-B850-E9439D77312C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C61A66F-4D5B-40D4-B850-E9439D77312C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C61A66F-4D5B-40D4-B850-E9439D77312C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FE38084-028A-4803-9D84-28555F890961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE38084-028A-4803-9D84-28555F890961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FE38084-028A-4803-9D84-28555F890961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FE38084-028A-4803-9D84-28555F890961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4A1D298-F7E9-4F43-AD7E-B88E69D685B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A1D298-F7E9-4F43-AD7E-B88E69D685B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A1D298-F7E9-4F43-AD7E-B88E69D685B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A1D298-F7E9-4F43-AD7E-B88E69D685B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62CFDBBE-2044-423C-842D-93A4C9967A0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62CFDBBE-2044-423C-842D-93A4C9967A0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62CFDBBE-2044-423C-842D-93A4C9967A0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62CFDBBE-2044-423C-842D-93A4C9967A0F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0042e8c2-b990-4aa1-b9ae-8e67274de501" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.Collection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://bio.mquter.qut.edu.au/BioPlayground2010/Workflow%20WCF/WorkflowService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WorkflowService2.wsdl" MetadataType="Wsdl" ID="f2b26f19-6a9d-449b-a98b-7726f81e0805" SourceId="1" SourceUrl="http://bio.mquter.qut.edu.au/BioPlayground2010/Workflow WCF/WorkflowService.svc?wsdl" />
+    <MetadataFile FileName="WorkflowService4.xsd" MetadataType="Schema" ID="8b392855-758f-4523-ac5c-fe64d341883a" SourceId="1" SourceUrl="http://bio.mquter.qut.edu.au/BioPlayground2010/Workflow WCF/WorkflowService.svc?xsd=xsd0" />
+    <MetadataFile FileName="WorkflowService41.xsd" MetadataType="Schema" ID="7e1a2d66-d7bd-4a46-8e94-35e1429d7133" SourceId="1" SourceUrl="http://bio.mquter.qut.edu.au/BioPlayground2010/Workflow WCF/WorkflowService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WorkflowService1.disco" MetadataType="Disco" ID="4c680c95-0ce6-4fdd-9ba3-80c5f40470ad" SourceId="1" SourceUrl="http://bio.mquter.qut.edu.au/BioPlayground2010/Workflow WCF/WorkflowService.svc?disco" />
+    <MetadataFile FileName="WorkflowService42.xsd" MetadataType="Schema" ID="14574af6-3c91-4c03-ab9e-41bf5a4f259f" SourceId="1" SourceUrl="http://bio.mquter.qut.edu.au/BioPlayground2010/Workflow WCF/WorkflowService.svc?xsd=xsd1" />
+    <MetadataFile FileName="WorkflowService43.xsd" MetadataType="Schema" ID="fec26709-5754-4b59-8e41-e4d4b0501ab8" SourceId="1" SourceUrl="http://bio.mquter.qut.edu.au/BioPlayground2010/Workflow WCF/WorkflowService.svc?xsd=xsd3" />
+    <MetadataFile FileName="WorkflowService21.wsdl" MetadataType="Wsdl" ID="bbbfb9f2-ce2c-4018-ae53-4ebb03713f3b" SourceId="1" SourceUrl="http://bio.mquter.qut.edu.au/BioPlayground2010/Workflow WCF/WorkflowService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

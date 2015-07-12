@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="MQuter_eLabApp.View.MenuBar.eLabMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:FishEyeItem="clr-namespace:FishEyeMenu;assembly=FishEyeMenu"
+   HorizontalAlignment="Stretch" Width="auto"
+             
+             >
+
+        <Canvas x:Name="LayoutRoot" Width="1000" HorizontalAlignment="Stretch" Height="25" Background="#FF312B2B" Opacity="0.8">
+            <FishEyeItem:FishEyeMenu x:Name="FishEyeMenuBar" Canvas.Left="467" Canvas.Top="-21"  MouseLeftButtonDown="FishEyeMenu_MouseLeftButtonDown"></FishEyeItem:FishEyeMenu>
+        <Border CornerRadius="10" Background="#FF101010" Canvas.Left="7" Canvas.Top="7" BorderBrush="White" BorderThickness="2,1">
+            <TextBlock Text="Workflow Canvas" Foreground="#FFFFD200" Margin="10,3,0,0" Width="248" Height="26" FontWeight="Bold" FontSize="12" />
+        </Border>
+    </Canvas>
+
+</UserControl>

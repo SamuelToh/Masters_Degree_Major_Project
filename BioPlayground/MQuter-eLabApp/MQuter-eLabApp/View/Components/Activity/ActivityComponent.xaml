@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="MQuter_eLabApp.View.Components.Activity.ActivityComponent"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controlsToolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"
+    xmlns:IOGate="clr-namespace:MQuter_eLabApp.View.Components.Activity"
+    mc:Ignorable="d"
+    Width="180" Height="45">
+
+    <!-- Start Activity Component -->
+    <Grid x:Name="grid5" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" Width="170" Height="40">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Border>
+            <Grid>
+                <Rectangle x:Name="MainRect4" Stroke="Black" VerticalAlignment="Bottom" RadiusX="3" RadiusY="3" Height="41" Width="170"  Opacity="0.7">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF3B3B3B" Offset="0.392"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock x:Name="Title9" VerticalAlignment="Bottom" Text="{Binding DisplayLabel}" TextWrapping="Wrap" Margin="29,0,0,16" Foreground="#FFFFD200" FontWeight="Bold" FontStyle="Italic"  Height="23"/>
+                <TextBlock x:Name="Title10" HorizontalAlignment="Left" Margin="4,0,0,2" VerticalAlignment="Bottom" Foreground="White" Text="Annotation" TextWrapping="Wrap" FontSize="6.667" />
+                <Button Width="13" Height="11"  Style="{StaticResource btnCloseStyle}" Margin="0,0,33,3" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Button_Click" />
+
+
+                <Rectangle Fill="Black" HorizontalAlignment="Left" Margin="24,1,0,17" Width="1"/>
+                <IOGate:IOGateComponent x:Name="InputGate" Margin="-73,-8,73,8" Width="20" Height="20" MouseLeftButtonDown="InputGate_MouseLeftButtonDown"></IOGate:IOGateComponent>
+                <IOGate:IOGateComponent x:Name="OutputGate" Margin="150,0,0,-2" Width="20" Height="20" VerticalAlignment="Bottom" d:LayoutOverrides="Height"></IOGate:IOGateComponent>
+
+
+                <Rectangle Fill="Black" HorizontalAlignment="Right" Margin="0,0,23,1" Width="1" Height="15" VerticalAlignment="Bottom"/>
+
+                <Rectangle Fill="Black" HorizontalAlignment="Left" Margin="60,0,0,1" Width="1" Height="15" VerticalAlignment="Bottom"/>
+                <Rectangle Fill="Black" Height="15" HorizontalAlignment="Left" Margin="141,0,0,1" VerticalAlignment="Bottom" Width="1" />
+                <Rectangle Fill="Black" Height="2" Margin="0,0,0,16" Stroke="Black" VerticalAlignment="Bottom"/>
+                <Rectangle Fill="Black" Height="15" HorizontalAlignment="Left" Margin="119,0,0,1" VerticalAlignment="Bottom" Width="1" />
+            </Grid>
+        </Border>
+    </Grid>
+
+    <!-- End of Activity Component -->
+</UserControl>

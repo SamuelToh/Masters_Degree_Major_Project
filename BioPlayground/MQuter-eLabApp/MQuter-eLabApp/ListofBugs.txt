@@ -1,0 +1,65 @@
+﻿WCF Service @ QUT
+===================
+http://bio.mquter.qut.edu.au/BioPlayground2010/Workflow%20WCF/WorkflowService.svc
+
+
+List of known bugs
+=====================
+
+1) Parameter menu sometimes don't reflect the right change (when adding 3 activities then erase one, and replace one more the param line removal will start to fail)
+1.1) Add on for point #1, bug can be replicated by first adding 2 activities then draw a line and remove the one with line drawn, line remainds in canvas (could be due to refresh of data context) new comp thus line ref lost forever.
+2) When drag out of screen lines still gets kind of distorted
+3) For loop on drag its inner input line does not follow the new position
+
+List of fixed items
+====================
+1) Parameter Editor binded the wrong model (it binds to the draggable copy instead of the newly duplicated copy)
+1) Parameter Editor Menu doesn't get updated when an activity component was removed.
+
+TODO List:
+=====================
+1) Line removal function for activity Canvas
+2) Connection Validation
+
+
+List of Done items
+========================
+
+1) Removal of Activities when hit the [x] cross button - Done
+3) Lines removal in parameter Canvas - Done
+4) Parsing of Result File - Done
+5) Output Result - Done
+6) Animation problem when animating back - Done
+7) Shortcut Category Selection [Done]
+11) Context Menu for running workflow [Done]
+8) When select from panel the shortcut for category selection should reflect on the change [ Done]
+8) Dictionary in Workflow Manager doesn't get updated when linkage/activity component were removed
+
+Documentations:
+=====================
+
+1) Programming Menu
+2) User Manual
+3) Technical Report
+
+
+
+
+
+
+Converting to production server
+================================
+
+1) DLL Loading point From local to http bin directory (fix) Not required anymore
+//SR.ConnectionManager.AlternateProviderLocation = "C:\\Users\\Tendious\\Documents\\Visual Studio 2010\\Projects\\MQuter-eLaboratory\\MQuter-eLaboratory.Web\\bin\\";
+SR.ConnectionManager.AlternateProviderLocation = System.Web.HttpRuntime.BinDirectory; //provider; //System.Web.HttpRuntime.BinDirectory;
+
+2) Changing the location of WCF service
+http://localhost:32019/Workflow WCF/WorkflowService.svc
+http://bio.mquter.qut.edu.au/BioPlayground2010/Workflow%20WCF/WorkflowService.svc
+
+3) Machine Name Tendious-PC to FITKGBL03
+
+4) Deploy local DLL into bin folder 
+
+

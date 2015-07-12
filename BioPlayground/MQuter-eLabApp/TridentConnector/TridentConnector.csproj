@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F4A1D298-F7E9-4F43-AD7E-B88E69D685B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TridentConnector</RootNamespace>
+    <AssemblyName>TridentConnector</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.ActivitiesSyncLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.ActivitiesSyncLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.DataLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.DataLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.DataLayer.DataLayerCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.DataLayer.DataLayerCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.DataLayer.DataLayerSecurity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.DataLayer.DataLayerSecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.DataLayer.DataProvider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.DataLayer.DataProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.DataLayer.DataProviders.Microsoft, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.DataLayer.DataProviders.Microsoft.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.DataLayer.DataProviders.Samples.OPC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.DataLayer.DataProviders.Samples.OPC.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.DataLayer.DataProvidersSecurity.Activity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.DataLayer.DataProvidersSecurity.Activity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.DataLayer.OPCBlobHandlers.TridentBlobHandler, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.DataLayer.OPCBlobHandlers.TridentBlobHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.DataLayer.OPCHandlers.TridentTypeHandler, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.DataLayer.OPCHandlers.TridentTypeHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.DataLayer.ServiceModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\TridentWS\Trident\Product\DataLayer\Services\ServiceModel\bin\Microsoft.Research.DataLayer.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.DataLayer.ServiceRegistry, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.DataLayer.ServiceRegistry.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.eResearch.Blackboard, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.eResearch.Blackboard.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.eResearch.Blackboard.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.eResearch.Blackboard.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.eResearch.Blackboard.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.eResearch.Blackboard.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.eResearch.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.eResearch.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.eResearch.Subscriber, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.eResearch.Subscriber.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.eResearch.Subscriber.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.eResearch.Subscriber.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.eResearch.Subscriber.Wcf, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.eResearch.Subscriber.Wcf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.ManagementStudioControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.ManagementStudioControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.ManagementStudioModels, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.ManagementStudioModels.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.ManagementStudioServices, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.ManagementStudioServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.ManagementStudioServices.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.ManagementStudioServices.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.Provenance.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.Provenance.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.Provenance.ProvenanceDataService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.Provenance.ProvenanceDataService.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.ProvenanceCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.ProvenanceCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.ProvenanceInterfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.ProvenanceInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.ProvenanceSubScriber, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.ProvenanceSubScriber.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.ProvenanceSubscriberCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.ProvenanceSubscriberCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.ProvenanceSubscriberMessageParser, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.ProvenanceSubscriberMessageParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.ScientificWorkflow.SecurityControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.ScientificWorkflow.SecurityControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.ScientificWorkflow.TridentComposer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.ScientificWorkflow.TridentComposer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.ScientificWorkflow.TridentModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.ScientificWorkflow.TridentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.ScientificWorkflow.TridentUtilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.ScientificWorkflow.TridentUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.ScientificWorkflow.UIDesigner, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.ScientificWorkflow.UIDesigner.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.TridentAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.TridentAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.TridentAuthentication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.TridentAuthentication.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.TridentCompiler, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.TridentCompiler.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.WorkflowApplication.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.WorkflowApplication.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.WorkflowApplicationControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.WorkflowApplicationControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.WorkflowApplicationModels, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.WorkflowApplicationModels.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.WorkflowApplicationServices, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\Microsoft.Research.WorkflowApplicationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="ScientificWorkflow.TridentWorkflowCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Project Trident - A Scientific Workflow Workbench\ScientificWorkflow.TridentWorkflowCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="TridentDbInstaller">
+      <HintPath>..\..\MQuter-eLaboratory\MQuter-eLaboratory.Web\bin\TridentDbInstaller.dll</HintPath>
+    </Reference>
+    <Reference Include="TridentHPCInstaller">
+      <HintPath>..\..\MQuter-eLaboratory\MQuter-eLaboratory.Web\bin\TridentHPCInstaller.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BioWFMLParser.cs" />
+    <Compile Include="DataContracts\Activity.cs" />
+    <Compile Include="DataContracts\Category.cs" />
+    <Compile Include="DataContracts\Parameter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TridentExecutor.cs" />
+    <Compile Include="TridentManager.cs" />
+    <Compile Include="TridentModelBuilder.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

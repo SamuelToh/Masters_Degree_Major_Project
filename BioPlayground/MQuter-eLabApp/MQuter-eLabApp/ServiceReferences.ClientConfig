@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <customBinding>
+                <binding name="CustomBinding_WorkflowService">
+                    <binaryMessageEncoding />
+                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+            </customBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://bio.mquter.qut.edu.au/BioPlayground2010/Workflow WCF/WorkflowService.svc"
+                binding="customBinding" bindingConfiguration="CustomBinding_WorkflowService"
+                contract="TridentEmulatorSvc.WorkflowService" name="CustomBinding_WorkflowService" />
+        </client>
+    </system.serviceModel>
+</configuration>

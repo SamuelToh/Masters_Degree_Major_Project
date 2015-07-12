@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C61A66F-4D5B-40D4-B850-E9439D77312C}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MQuter_eLabApp</RootNamespace>
+    <AssemblyName>MQuter-eLabApp</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>MQuter-eLabApp.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>MQuter_eLabApp.App</SilverlightAppEntry>
+    <TestPageFileName>MQuter_eLabAppTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20421.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FishEyeMenu">
+      <HintPath>..\..\..\..\..\Downloads\FishEyeMenu_Silverlight\FishEyeMenu_Silverlight\FishEyeMenu\Bin\Debug\FishEyeMenu.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Drawing" />
+    <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="mscorlib" />
+    <Reference Include="SStuff.FlowControls">
+      <HintPath>..\..\..\..\..\Desktop\Work\INN695 - BioMashup\FlowLayouts-src\SStuff.FlowControls\Bin\Release\SStuff.FlowControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ComponentModel.Composition.Initialization, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.DataForm.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Navigation, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Serialization, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="3rdParty Helper\DataSourceCreator.cs" />
+    <Compile Include="Events\ActivityValidationEventArgs.cs" />
+    <Compile Include="Events\NestedActivityEventArgs.cs" />
+    <Compile Include="Events\ResultSetEventArgs.cs" />
+    <Compile Include="Exceptions\NullValueForMandatoryParam.cs" />
+    <Compile Include="Model\ActivityValidator.cs" />
+    <Compile Include="Model\BioWFMLResultManager.cs" />
+    <Compile Include="ViewModel\BioWFMLResultModel\ResultSet.cs" />
+    <Compile Include="ViewModel\BioWFMLResultModel\ResultCollections.cs" />
+    <Compile Include="ViewModel\ParamInputModel.cs" />
+    <Compile Include="ViewModel\ParamOutputModel.cs" />
+    <Compile Include="ViewModel\WorkflowModels\ForLoopFlowModel.cs" />
+    <Compile Include="View\Components\Activity\ForLoopComponent.xaml.cs">
+      <DependentUpon>ForLoopComponent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Components\Activity\IActivityComponent.cs" />
+    <Compile Include="View\Panels\ExceptionPanel.xaml.cs">
+      <DependentUpon>ExceptionPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Panels\JobRunner.xaml.cs">
+      <DependentUpon>JobRunner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Panels\ResultPanel.xaml.cs">
+      <DependentUpon>ResultPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Panels\RightPanel.xaml.cs">
+      <DependentUpon>RightPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Events\ActivityEventArgs.cs" />
+    <Compile Include="Events\AnnotationEvent.cs" />
+    <Compile Include="Events\ConnectionEventArgs.cs" />
+    <Compile Include="Exceptions\UnableLocateCompEx.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AnnotationManager.cs" />
+    <Compile Include="Model\UIHelper.cs" />
+    <Compile Include="Model\WorkflowManager.cs" />
+    <Compile Include="Model\WorkflowController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\TridentEmulatorSvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\3DActivityModel.cs" />
+    <Compile Include="ViewModel\3DActivityVisualizationData.cs" />
+    <Compile Include="ViewModel\ActivityModel.cs" />
+    <Compile Include="ViewModel\AnnotationEllipseModel.cs" />
+    <Compile Include="ViewModel\AnnotationFreeHandModel.cs" />
+    <Compile Include="ViewModel\AnnotationRectangleModel.cs" />
+    <Compile Include="ViewModel\AnnotationStickyModel.cs" />
+    <Compile Include="ViewModel\IAnnotationModel.cs" />
+    <Compile Include="ViewModel\WorkflowModels\StandardFlowModel.cs" />
+    <Compile Include="ViewModel\CategoryModel.cs" />
+    <Compile Include="ViewModel\CategoryVisualData.cs" />
+    <Compile Include="ViewModel\eLaboratoryXmlModel.cs" />
+    <Compile Include="ViewModel\MenuItemViewModel.cs" />
+    <Compile Include="ViewModel\ParamBinder.cs" />
+    <Compile Include="ViewModel\ParameterModel.cs" />
+    <Compile Include="ViewModel\ParamVisualizationData.cs" />
+    <Compile Include="ViewModel\WorkflowModels\BaseWorkflowModel.cs" />
+    <Compile Include="ViewModel\WorkflowModels\IWorkflowItem.cs" />
+    <Compile Include="ViewModel\WorkflowModels\MQuterWorkflow.cs" />
+    <Compile Include="ViewModel\WorkflowModels\ParalleWorkflowlModel.cs" />
+    <Compile Include="ViewModel\WorkflowModels\SequentialWorkflowModel.cs" />
+    <Compile Include="View\Components\Activity\ActivityComponent.xaml.cs">
+      <DependentUpon>ActivityComponent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Editors\ActivityEditor.xaml.cs">
+      <DependentUpon>ActivityEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MenuBar\AnnotationToolbar.xaml.cs">
+      <DependentUpon>AnnotationToolbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConnectionLines\BaseConnection.cs" />
+    <Compile Include="View\DrawingCanvas\ParameterCanvas.xaml.cs">
+      <DependentUpon>ParameterCanvas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConnectionLines\ActivityConnection.cs" />
+    <Compile Include="View\MenuBar\eLabMenu.xaml.cs">
+      <DependentUpon>eLabMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Components\Activity\IOGateComponent.xaml.cs">
+      <DependentUpon>IOGateComponent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Components\Parameter\ParamOutboundComp.xaml.cs">
+      <DependentUpon>ParamOutboundComp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConnectionLines\ParameterConnection.cs" />
+    <Compile Include="View\Components\Parameter\ParamIOGate.xaml.cs">
+      <DependentUpon>ParamIOGate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Components\Parameter\ParamInboundComp.xaml.cs">
+      <DependentUpon>ParamInboundComp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Editors\ParamValueEditor.xaml.cs">
+      <DependentUpon>ParamValueEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DrawingCanvas\WorkflowCanvas.xaml.cs">
+      <DependentUpon>WorkflowCanvas.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="View\Components\Activity\ForLoopComponent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Panels\ExceptionPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Panels\JobRunner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Panels\ResultPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Panels\RightPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Asset\AnnotationToolbarStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Asset\FreeStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Asset\MainUIStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Components\Activity\ActivityComponent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Editors\ActivityEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MenuBar\AnnotationToolbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DrawingCanvas\ParameterCanvas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MenuBar\eLabMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Components\Activity\IOGateComponent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Components\Parameter\ParamOutboundComp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Components\Parameter\ParamIOGate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Components\Parameter\ParamInboundComp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Editors\ParamValueEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DrawingCanvas\WorkflowCanvas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Resource Include="Asset\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ListofBugs.txt" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Service References\TridentEmulatorSvc\MQuter_eLabApp.TridentEmulatorSvc.Category.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TridentEmulatorSvc\WorkflowService2.wsdl" />
+    <None Include="Service References\TridentEmulatorSvc\WorkflowService21.wsdl" />
+    <None Include="Service References\TridentEmulatorSvc\WorkflowService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TridentEmulatorSvc\WorkflowService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TridentEmulatorSvc\WorkflowService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TridentEmulatorSvc\WorkflowService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Resource Include="Resources\Images\MainLogo.png" />
+    <Resource Include="Resources\Images\Experiment.png" />
+    <Resource Include="Resources\Images\Layer 0.png" />
+    <Resource Include="Resources\Menu Item\file.png" />
+    <Resource Include="Resources\Menu Item\file_del.png" />
+    <Resource Include="Resources\Menu Item\file_explore.png" />
+    <Resource Include="Resources\Menu Item\file_export.png" />
+    <Resource Include="Resources\Menu Item\file_new.png" />
+    <Resource Include="Resources\Menu Item\file_save.png" />
+    <Resource Include="Resources\Menu Item\FreeHandIcon.png" />
+    <Resource Include="Resources\Menu Item\SelectItem.png" />
+    <Resource Include="Resources\Menu Item\NewWF.png" />
+    <Resource Include="Resources\Menu Item\run-icon.jpg" />
+    <Content Include="SampleDPFile.xml" />
+    <None Include="Service References\TridentEmulatorSvc\WorkflowService1.disco" />
+    <Content Include="ServiceReferences.ClientConfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\TridentEmulatorSvc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TridentEmulatorSvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TridentEmulatorSvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TridentEmulatorSvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
